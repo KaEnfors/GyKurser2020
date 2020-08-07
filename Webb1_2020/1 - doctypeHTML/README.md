@@ -9,4 +9,12 @@
 
 
 ### Examination
+- Skapa en egen hemsida
+- Hemsidan...
+    - Presenterar text och bild om valfritt ämne
+    - Hemsidan är tydlig
+    - Koden är tydlig att läsa
+- Du använder lämpliga html-taggar
+- Du använder lämpliga style-parametrar
+
 
