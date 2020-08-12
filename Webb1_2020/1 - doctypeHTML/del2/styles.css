@@ -1,0 +1,35 @@
+
+body {
+    margin: 0 0;
+    padding: 0 0;
+
+}
+
+.header {
+    width: 100%;
+    min-height: 200px;
+    background-color: red;
+}
+
+.mainpage {
+    display: flex;
+    
+    
+}
+.maincontent {
+    width: 80%;
+    min-height: 600px;
+    background-color: green;
+}
+.sidecontent {
+    width: 20%;
+    min-height: 100%;
+    background-color: yellow;
+}
+
+.footer {
+    width: 100%;
+    min-height: 100px;
+    background-color: blue;
+}
+

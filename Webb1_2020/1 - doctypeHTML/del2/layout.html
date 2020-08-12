@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Example</title>
+
+    <!--Länk till förberedda "vanliga" CSS-dokument gjorda av Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!--Länk till våra egna styles-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!--div taggen används för att gruppera flera underliggande taggar i en "ruta"-->
+    <!--På så sätt så kan man dela upp sidans innehåll till olika platser på sidan-->
+    <!--Vi kan sätta en "klass" till varje element, för att sätta specifika stiler till varje element-->
+    <div class="header">
+        <h1>Headercontent</h1>
+        <p>
+            Vanligtvis placerar man en "banner" högst upp
+            där man kan placera en bakgrundsbild, titel, icon
+            navigeringsflikar, etc.
+        </p>
+    </div>
+
+
+    <!--På detta sätt gör vi en stor box, med två mindre boxar inuti, så det blir två kolumner-->
+    <!--En för själva sidan vi vill visa, en annan för något påå sidan av huvudämnet-->
+    <div class="mainpage">
+        <div class="maincontent">
+            <h1>Main</h1>
+            <p>Här placeras det själva innehållet</p>
+        </div>
+
+        <div class="sidecontent">
+            <h3>Sid vy</h3>
+            <p>Småsaker att lägga på sidan</p>
+        </div>
+    </div>
+
+
+    <!--Längst ner vill vi ha lite loggor, copyright stämplar, etc.-->
+    <div class="footer">
+        <h3>Footer</h3>
+        <p>Copyright, datum, etc.</p>
+    </div>
+</body>
+
+</html>
