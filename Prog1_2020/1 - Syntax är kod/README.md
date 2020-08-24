@@ -13,6 +13,6 @@ skriva koden i.
 ### Mål
 - Installera Python
 - Installera VS code
-- Förstå de vanligaste kommandona
+- Förstå de vanligaste kommandon och verktyg
 - Förstå hur programflödet går
-
+- Hitta och åtgärda enkla fel i programkoden
