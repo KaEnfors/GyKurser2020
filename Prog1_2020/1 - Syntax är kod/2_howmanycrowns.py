@@ -9,8 +9,8 @@ print("Calculate number of swedish crowns")
 print("from Euros or Dollars")
 print("###################################")
 
-VALUE_OF_DOLLAR = 8.77              #Värdet på dollar sparas i en variabel
-VALUE_OF_EURO = 10.36               #Värdet på euro sparas i en variabel
+VALUE_OF_DOLLAR = 8.77              #Värdet på dollar sparas i en konstant variabel
+VALUE_OF_EURO = 10.36               #Värdet på euro sparas i en konstant variabel
 
 value = input("Enter amount, end with $ or €\n: ") #Användaren skriver in mängden
 print("You entered:", value)        #Det användaren skrev in, skrivs ut som bekräftelse
