@@ -6,6 +6,7 @@
 
 VAR1 = 123
 VAR2 = "123"
+VAR3 = 12.3
 
 print("Type of VAR1: ", type(VAR1))
 print("Type of VAR2: ", type(VAR2))
@@ -17,8 +18,8 @@ input("Enter...")
 print("VAR1 multiplied by 2:", VAR1 * 2)
 print("VAR2 multiplied by 2:", VAR2 * 2)
 input("Enter...")
-a = "1"
-b = "1"
+a = "abc"
+b = "xyz"
 print(a, "+", b, "=", a + b)
 input("Enter...")
 print(a, "+", b, "=", int(a) + int(b))
