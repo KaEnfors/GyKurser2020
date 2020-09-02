@@ -20,7 +20,19 @@ def contain():
         turtle.goto(turtle.xcor(), turtle.ycor() - 10)
 
 def move():
-    
+    speed = random.randint(4,10)
+    turtle.forward(speed)
+
+def turn():
+    angle = random.randint(1,9) * 45
+    turtle.setheading(angle)
+
+
+turtle.Screen().bgcolor('blue')
+turtle.pencolor('white')
 
 while True:
+    turn()
+    move()
+    contain()
 
