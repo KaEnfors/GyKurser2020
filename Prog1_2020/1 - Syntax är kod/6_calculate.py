@@ -6,7 +6,7 @@ import numpy as math
 x = math.linspace(-10, 10, 100)  # Skapa punkter längs x-axeln. Grafen börjar på 0, slutar på 20 och ska ha 100 punkter
 #print(x)                       # Printa innehållet i x, så ser du 100 punkter med jämna mellanrum
 #graph.plot(x, math.sin(x))     # Rita funktionen y = sin(x)
-graph.plot(x, x*x)           # Rita y = kx + m
+graph.plot(x, x+x)           # Rita y = kx + m
 #graph.plot(x, -1.2*x-2)         # Rita y = kx + m
 #graph.plot(x, 2*x+-2)           # Rita y = kx + m
 #graph.plot(x, 0.3*x+1)          # Rita y = kx + m

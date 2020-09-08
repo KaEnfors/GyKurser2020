@@ -10,6 +10,7 @@ COLORS = [
     'pink',
 ]
 
+
 TOP = 200
 BOTTOM = -200
 LEFT = -200
