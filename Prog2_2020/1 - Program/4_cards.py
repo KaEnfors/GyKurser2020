@@ -4,6 +4,33 @@
 
 """
 
+def print_card(card:dict):
+    """
+    Print a card from dictionary
+    """
+    pass
+
+def draw_card(cards:list, randomly=False):
+    """
+    Draw a card from list.
+    @param randomly, False (default) for top card, True for random
+    """
+    return ""
+
+def give_card(cards, card):
+    """
+    Adds a card to a list of cards
+    """
+    pass
+
+def shuffle(cards:list):
+    """
+    Shuffle a list of cards in random order
+    @return shuffled list of cards
+    """
+    return ""
+
+
 CARD_RANKS = [
     "2", "3", "4", "5",
     "6", "7", "8", "9",
