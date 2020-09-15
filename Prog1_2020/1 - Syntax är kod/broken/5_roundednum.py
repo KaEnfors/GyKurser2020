@@ -1,11 +1,11 @@
 # Detta program avrundar decimaltal till heltal
-# Det blir dock fel avrundning. Vi vill att programmet ska avrunda uppåt.
-# Exempelvis: 2.3 borde bli 2 men 2.5 borde bli 3
-# Fixa...
 
-A = int(input("Enter number A: "))
-B = int(input("Enter number B: "))
+A = float(input("Enter decimal number: "))
 
-RES = A / B
-RES = int(RES)
-print(A,"/",B,"=", RES)
+ROUNDED = int(A + 0.5)
+FLOOR = int(A)
+
+print "Floored number is:" FLOOR)
+print("Correctly rounded number is: " + ROUNDED)
+print("\n\n\n\n\n")
+

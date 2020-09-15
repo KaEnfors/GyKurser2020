@@ -7,7 +7,7 @@ import random
 NUMBERS = []
 
 num = 0
-while num < 50:
+while num < 15:
     NUMBERS.append(num)
     num = num + 1
 
