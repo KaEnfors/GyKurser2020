@@ -24,13 +24,13 @@ body {
 }
 
 #content {
-    width: 70%;
+    flex-grow: 7;
     height: 70vh;
     background-color: yellow;
 }
 
 #sidebar {
-    width: 30%;
+    flex-grow: 2;
     background-color: orange;
 }
 
