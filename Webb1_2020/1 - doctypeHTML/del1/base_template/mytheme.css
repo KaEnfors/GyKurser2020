@@ -1,0 +1,15 @@
+
+* {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: lighter;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}
+
