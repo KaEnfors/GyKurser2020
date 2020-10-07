@@ -1,9 +1,9 @@
-import arcade
 import KarlGameFile
 
 
 
 def main():
+    value = 10
     game = KarlGameFile.KarlGame()
     game.run()
 
