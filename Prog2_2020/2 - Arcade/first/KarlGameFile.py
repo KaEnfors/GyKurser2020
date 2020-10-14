@@ -52,7 +52,7 @@ class KarlGame(arcade.Window):
         self.dy = 0.0
         self.ddy = 0.0
         self.speed = 10.0
-        self.size = 50.0
+        self.size = 20.0
         
 
 
@@ -63,24 +63,31 @@ class KarlGame(arcade.Window):
 
     def on_key_press(self, key, modifiers):
 
+
         if key == arcade.key.UP:
-            self.ddy = 1
+            self.ddy += 1
         elif key == arcade.key.DOWN:
-            self.ddy = -1
+            self.ddy -= 1
 
 
         if key == arcade.key.RIGHT:
-            self.ddx = 1
+            self.ddx += 1
         elif key == arcade.key.LEFT:
-            self.ddx = -1
+            self.ddx -= 1
 
 
     def on_key_release(self, key, modifiers):
 
-        if key == arcade.key.UP or key == arcade.key.DOWN:
-            self.ddy = 0
-        if key == arcade.key.RIGHT or key == arcade.key.LEFT:
-            self.ddx = 0
+        if key == arcade.key.UP:
+            self.ddy -= 1
+        elif key == arcade.key.DOWN:
+            self.ddy += 1
+
+
+        if key == arcade.key.RIGHT:
+            self.ddx -= 1
+        elif key == arcade.key.LEFT:
+            self.ddx += 1
 
 
     def contain_ball(self):

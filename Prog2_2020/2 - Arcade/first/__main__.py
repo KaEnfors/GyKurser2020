@@ -1,4 +1,4 @@
-import KarlGameFile
+import KarlGameFile, KarlGameFileLek1
 
 
 
