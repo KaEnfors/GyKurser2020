@@ -1,11 +1,13 @@
-import KarlGameFile, KarlGameFileLek1
+import KarlGameFile, KarlGameFileMovement, KarlGameFileSmoovement, KarlGameFileBouncecontain
 
 
 
 def main():
     value = 10
-    game = KarlGameFile.KarlGame()
+    game = KarlGameFileBouncecontain.KarlGame()
     game.run()
+    
+    
 
 
 if __name__ == "__main__":
