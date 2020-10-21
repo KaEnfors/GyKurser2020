@@ -64,15 +64,20 @@ class KarlGame(arcade.Window):
 
     def contain_ball(self):
 
+        print("(",self.posx, ",", self.posy,")")
         
-        if self.WINDOW_W - self.radius < self.posx:
-            self.dx *= -3
-        if self.radius > self.posx:
-            self.dx *= -3
-        if self.WINDOW_H - self.radius < self.posy:
-            self.dy *= -3
-        if self.radius > self.posy:
-            self.dy *= -3
+        if self.WINDOW_W + self.radius < self.posx:
+            self.posx = 0
+            print("Outofbounds HÖGER")
+        elif 0 > self.posx:
+            self.posx = self.WINDOW_W
+            print("Outofbounds VÄNSTER")
+        elif self.WINDOW_H + self.radius < self.posy:
+            self.posy = 0
+            print("Outofbounds UPP")
+        elif 0 > self.posy:
+            self.posy = self.WINDOW_H
+            print("Outofbounds NER")
 
 
         
