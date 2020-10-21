@@ -25,6 +25,8 @@ class KarlGame(arcade.Window):
         self.dy = 0
         self.speed = 5
 
+        self.radius = 50
+
         
 
 
@@ -61,7 +63,19 @@ class KarlGame(arcade.Window):
 
 
     def contain_ball(self):
-        pass
+
+        
+        if self.WINDOW_W - self.radius < self.posx:
+            self.dx *= -3
+        if self.radius > self.posx:
+            self.dx *= -3
+        if self.WINDOW_H - self.radius < self.posy:
+            self.dy *= -3
+        if self.radius > self.posy:
+            self.dy *= -3
+
+
+        
     
     def on_update(self, deltatime):
         """
@@ -77,6 +91,7 @@ class KarlGame(arcade.Window):
         self.posx += self.dx * self.speed
         self.posy += self.dy * self.speed
 
+        self.contain_ball()
 
     
     def on_draw(self):
@@ -85,7 +100,7 @@ class KarlGame(arcade.Window):
         """
         arcade.start_render()
         arcade.set_background_color(arcade.color.SKY_MAGENTA)
-        arcade.draw_circle_filled(self.posx, self.posy, 50,  arcade.color.RICH_ELECTRIC_BLUE)
+        arcade.draw_circle_filled(self.posx, self.posy, self.radius,  arcade.color.RICH_ELECTRIC_BLUE)
 
         super().on_draw()
 

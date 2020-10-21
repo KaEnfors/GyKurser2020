@@ -45,9 +45,6 @@ class KarlGame(arcade.Window):
         if arcade.key.S == key:
             self.ddy = -1
 
-
-
-
     def on_key_release(self, key, modifiers):
 
         if arcade.key.D == key:
