@@ -14,6 +14,6 @@ abbe = User()
 efkan = User()
 print(karl.name, " ", karl.age)
 print(abbe.name)
-print(efkan)
+print(efkan.age)
 
 
