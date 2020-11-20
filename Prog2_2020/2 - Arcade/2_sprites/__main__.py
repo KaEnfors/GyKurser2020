@@ -1,9 +1,9 @@
-from GameFile import SpriteGame
+import GameFile, GameFileLoadSprite, GameFileSmoothment, GameFileKlasser
 
 
 def main():
     value = 10
-    game = SpriteGame()
+    game = GameFile.SpriteGame()
     game.setup()
     game.run()
     

@@ -2,23 +2,11 @@ import arcade, os, math
 from arcade import Sprite
 
 
-class Projectile(arcade.Sprite):
-    
-    def __init__(self, file=None, scale=1.0, x=0, y=0, angle=0):
-        super().__init__(filename=file, scale=scale)
-        self.center_x = x
-        self.center_y = y
-        self.angle = angle
-
-        self.change_x = -math.sin(math.radians(self.angle)) * 20
-        self.change_y = math.cos(math.radians(self.angle)) * 20
-
-
 
 class Player(arcade.Sprite):
     
 
-    def __init__(self, file=None, scale=1.0, x=0, y=0, projfile=None):
+    def __init__(self, file=None, scale=1.0, x=0, y=0):
         super().__init__(filename=file, scale=scale)
 
         self.center_x = x
@@ -34,17 +22,6 @@ class Player(arcade.Sprite):
         
         self.dspeed = 0
         self.speed = 0
-
-
-        self.projectile = projfile
-        self.cooldown = 0
-
-    def fire(self):
-        if(self.cooldown > 0): return None
-        self.cooldown = 30
-        return Projectile(self.projectile, scale=0.3, x=self.center_x, y=self.center_y, angle=self.angle)
-        
-
     
     def update(self):
         self.angle += self.dangle
@@ -60,16 +37,14 @@ class Player(arcade.Sprite):
         self.change_x = self.velx * self.speed
         self.change_y = self.vely * self.speed
 
-        if self.cooldown > 0:
-            self.cooldown -= 1
 
         super().update()
+
 
 
 class SpriteGame(arcade.Window):
 
     player : object
-    projectiles : object
     
     def __init__(self, width=800, height=660, title="SpriteGame"):
         super().__init__(width,height,title)
@@ -81,15 +56,13 @@ class SpriteGame(arcade.Window):
         path = os.path.abspath(__file__)
         directory = os.path.dirname(path)
         spritefile = directory + '/static/ship_blue.png'
-
-        projfile = directory + '/static/beam.png'
-
-        self.player = Player(file=spritefile, scale=0.6, x=self.WINDOW_W/2, y=self.WINDOW_H/2, projfile=projfile) 
-        self.projectiles = arcade.SpriteList()
+        self.player = Player(file=spritefile, scale=0.6, x=self.WINDOW_W/2, y=self.WINDOW_H/2)
+        self.player2 = Player(file=spritefile, scale=0.6, x=self.WINDOW_W/3, y=self.WINDOW_H/3)
 
     def run(self):
         arcade.run()
 
+    
 
     def on_key_press(self, key, modifiers):
 
@@ -103,11 +76,6 @@ class SpriteGame(arcade.Window):
             p.dangle += 10
         if key == arcade.key.D:
             p.dangle += -10
-        if key == arcade.key.SPACE:
-            newProjectile = p.fire()
-            if newProjectile:
-                self.projectiles.append(newProjectile)
-
 
     def on_key_release(self, key, modifiers):
 
@@ -129,7 +97,7 @@ class SpriteGame(arcade.Window):
     def on_update(self, deltatime):
 
         self.player.update()
-        self.projectiles.update()
+        self.player2.update()
 
     def on_draw(self):
 
@@ -137,4 +105,4 @@ class SpriteGame(arcade.Window):
         arcade.start_render()
         
         self.player.draw()
-        self.projectiles.draw()
+        self.player2.draw()

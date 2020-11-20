@@ -66,7 +66,7 @@ class KarlGame(arcade.Window):
         Updaterar alla modeller, och dess värden.
         """        
         super().on_update(deltatime)
-
+        #9.4999             #0
         self.dx += (self.ddx - self.dx)/20
         self.dy += (self.ddy - self.dy)/20
 
