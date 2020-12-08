@@ -1,13 +1,13 @@
-import GameFile, GameFileLoadSprite, GameFileSmoothment, GameFileKlasser
+import GameFile, GameFileLoadSprite, GameFileSmoothment, GameFileKlasser, GameFileMultishot
 
 
 def main():
     value = 10
-    game = GameFile.SpriteGame()
+    game = GameFileMultishot.SpriteGame()
     game.setup()
     game.run()
-    
-    
+
+
 
 
 if __name__ == "__main__":

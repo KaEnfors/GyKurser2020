@@ -4,3 +4,7 @@
 .bg-primary {
     background-color: var(--primary) !important;
 }
+
+.border {
+    border-width: 5px !important; 
+}

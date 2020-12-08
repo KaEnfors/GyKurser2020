@@ -25,6 +25,7 @@ class SpriteGame(arcade.Window):
         self.rotation = 0
         self.dangle = 0
         
+        
 
     def run(self):
         arcade.run()
