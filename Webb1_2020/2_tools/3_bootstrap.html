@@ -16,6 +16,27 @@
     <button class="btn btn-secondary">Button2</button>
     <button class="btn btn-success">Button3</button>
     <button class="btn btn-danger">Button4</button>
+    <div class="row">
+        <nav class="navbar">
+            <div class="nav-item">
+                <a href="#box_nummer_2">anchor link</a>
+            </div>
+            <div class="nav-item">
+                <div class="w3dropdown">
+                    <span>Mouse over me</span>
+                    <div class="w3dropdown-content">
+                      <a href="#box_nummer_2">Länk till box 2</a>
+                      <p>Hello World 2</p>
+                      <p>Hello World 3</p>
+                      <p>Hello World 4</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        
+    </div>
 
     <div class="row">
         <div class="col container">
@@ -32,11 +53,52 @@
             <p class="border border-info m-5 p-3">Hej här är min text med border</p>
         </div>
         <div class="col bg-secondary">
-            Col 3
+            
         </div>
+    </div>
+    <div class="col container">
+        <div class="card" style="width: 18rem;">
+            <img src="https://lafavorita.se/wp-content/uploads/2019/12/19.-pizza-salami-mushroom-cucumber-food-restaurant.png" class="card-img-top" alt="...">
+            <div class="card-body" id="box_nummer_2">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="https://lafavorita.se/" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    <div class="col container">
+        <div class="card" style="width: 18rem;">
+            <img src="https://lafavorita.se/wp-content/uploads/2019/12/19.-pizza-salami-mushroom-cucumber-food-restaurant.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="https://lafavorita.se/" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
     </div>
 
 
 </body>
+<style>
+.w3dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.w3dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.w3dropdown:hover .w3dropdown-content {
+  display: block;
+}
+
+</style>
 
 </html>

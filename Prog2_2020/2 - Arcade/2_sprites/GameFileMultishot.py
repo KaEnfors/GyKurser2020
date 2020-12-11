@@ -100,7 +100,7 @@ class SpriteGame(arcade.Window):
         p = self.player
 
         if key == arcade.key.W:
-            p.dspeed += 10
+            self.player.dspeed += 10
         if key == arcade.key.S:
             p.dspeed += -5
         if key == arcade.key.A:
