@@ -3,7 +3,7 @@ import GameFile, GameFileLoadSprite, GameFileSmoothment, GameFileKlasser, GameFi
 
 def main():
     value = 10
-    game = GameFileMultishot.SpriteGame()
+    game = GameFile.SpriteGame()
     game.setup()
     game.run()
 

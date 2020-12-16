@@ -18,11 +18,13 @@ class Projectile(arcade.Sprite):
 class Player(arcade.Sprite):
     
 
-    def __init__(self, file=None, scale=1.0, x=0, y=0, projfile=None):
-        super().__init__(filename=file, scale=scale)
+    def __init__(self, filename=None, scale=1.0, x=0, y=0, projfile=None):
+        super().__init__(filename=filename, scale=scale)
 
         self.center_x = x
         self.center_y = y
+
+        
 
         self.accx = 0
         self.accy = 0
@@ -75,7 +77,7 @@ class SpriteGame(arcade.Window):
         super().__init__(width,height,title)
         self.WINDOW_H = height
         self.WINDOW_W = width
-
+        
 
     def setup(self):
         path = os.path.abspath(__file__)
@@ -84,7 +86,8 @@ class SpriteGame(arcade.Window):
 
         projfile = directory + '/static/beam.png'
 
-        self.player = Player(file=spritefile, scale=0.6, x=self.WINDOW_W/2, y=self.WINDOW_H/2, projfile=projfile) 
+        self.player = Player(filename=spritefile, scale=0.6, x=self.WINDOW_W/2, y=self.WINDOW_H/2, projfile=projfile) 
+        self.player2 = Player(filename=spritefile, scale=0.6, x=self.WINDOW_W/4, y=self.WINDOW_H/4, projfile=projfile) 
         self.projectiles = arcade.SpriteList()
 
     def run(self):
@@ -104,10 +107,12 @@ class SpriteGame(arcade.Window):
         if key == arcade.key.D:
             p.dangle += -10
         if key == arcade.key.SPACE:
-            newProjectile = p.fire()
+            newProjectile = self.player.fire()
             if newProjectile:
                 self.projectiles.append(newProjectile)
-
+            else:
+                print("Sorry! Cooldown....")
+            
 
     def on_key_release(self, key, modifiers):
 
@@ -126,10 +131,20 @@ class SpriteGame(arcade.Window):
 
 
 
-    def on_update(self, deltatime):
 
+    def on_update(self, deltatime):
         self.player.update()
+        self.player2.update()
         self.projectiles.update()
+
+
+        colliding = self.player2.collides_with_list(self.projectiles)
+        for collision in colliding:
+            print("You got hit!")
+            self.projectiles.remove(collision)
+            print("Make explosion...")
+            print("Remove life from player")
+
 
     def on_draw(self):
 
@@ -137,4 +152,5 @@ class SpriteGame(arcade.Window):
         arcade.start_render()
         
         self.player.draw()
+        self.player2.draw()
         self.projectiles.draw()
