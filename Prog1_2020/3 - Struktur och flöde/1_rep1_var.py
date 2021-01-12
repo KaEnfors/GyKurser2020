@@ -9,8 +9,8 @@ x‌‌ = 25
 y = 11‌‌ 
 c = x % y
 
-print(x+y)
-print(c + y % c)
+print(x+y)       #36
+print(c + y % c) #
 print(x % c + y)
 
 
@@ -21,7 +21,7 @@ print(x % c + y)
 x = "Donald"
 y = "Trump"
 ‌‌ 
-print(x*5)
+print(x*5) 
 print(y*5)‌‌ 
 print((x + y)‌‌ * 5)
 print(x[0]*5 + x,y + y[-1]*5)
