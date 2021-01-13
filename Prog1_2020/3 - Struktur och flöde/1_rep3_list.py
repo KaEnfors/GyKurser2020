@@ -19,7 +19,11 @@ print(x[2:5])
 
 print(x.index("1"))
 print(x.index("5"))
+print(len(x))
 
 
-#x = []
+
+
+x = [3,8,6,1,2]
+
 
