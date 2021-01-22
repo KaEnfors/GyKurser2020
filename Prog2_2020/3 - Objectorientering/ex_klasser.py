@@ -17,23 +17,50 @@ strukturer.
 
 
 
-# Ex1
-class classname(object):
-
-    x = 1
-    y = "string"
-    z = ['fi', 'fa', 'fo']
-
-obj = classname()
-
-#print("raw:", obj)
-#print("values:", obj.x, obj.y, obj.z)
 
 
+RANKS = [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+    "A",
+]
 
-class User():
-    pass
+SUITS = [
+    "H",
+    "S",
+    "D",
+    "C"
+]
+
+class Card():
+    rank : int
+    suit : int
+
+    def __str__(self):
+#        return str(self.__dict__)
+        return SUITS[self.suit] + RANKS[self.rank]
+
+    def higherThan(self, card):
+        return self.rank > card.rank
+        #if :
+        #    return True
+        ##else:
+        # #   return False
 
 
+mittkort = Card()
+mittkort.rank = 0
+mittkort.suit = 3
 
+print(mittkort)
 
