@@ -58,6 +58,11 @@ class Card():
         # #   return False
 
 
+
+class Deck():
+    card : Card
+
+
 mittkort = Card()
 mittkort.rank = 0
 mittkort.suit = 3

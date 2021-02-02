@@ -18,7 +18,7 @@ class Person():
         print("Hi!")
 
 
-class Employee(Person):
+class Employee():
     working_hours :int
     phone : str
 
@@ -28,12 +28,24 @@ class Employee(Person):
     def fire(self):
         print("Bye!")
 
+        unregister()
+        taxes()
+        akassa()
+        
 
-class Teacher(Employee):
+
+
+
+class Teacher(Person, Employee):
     cofefe : bool
     
     def teach(self):
         pass
+
+    def go_on_vacation(self):
+
+        print("NO!")
+
 
 class Student(Person):
     courses : list
@@ -48,11 +60,27 @@ class Admin(Employee):
     def remove_csn(student : Student):
         pass
 
+    def fire(self):
+        super().fire()
+        self.keys = None
+
+
 
 class Course():
     students : list
-    teachers : list
+    teacher : Teacher
+    
 
+
+class Organization():
+    employees = list
+
+    def print_employees(self):
+        for e in self.employees:
+            print(e.go_on_vacation())
+
+
+    
 
 employees = []
 employees.append(Admin())

@@ -4,7 +4,7 @@ Jämförelser och if/while
 """
 
 
-x = 7
+x = 7 > 10
 
 print(x > 5)
 print(x < 5)
