@@ -1,9 +1,11 @@
-from arcade import Sprite
+from core import PhysicsSprite
 
 
-
-class Character(Sprite):
+class Character(PhysicsSprite):
     pass
+
+#    def on_update(self, delta):
+#        pass    
 
 
 
