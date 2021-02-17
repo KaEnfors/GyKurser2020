@@ -1,7 +1,7 @@
 import arcade, os
 from core import InputController
 from player.character import Character
-from enemy.muskrooms import Muskroom
+from enemy.enemies import Muskroom, Muscrab
 
 
 
@@ -25,6 +25,9 @@ class MuskFormer(arcade.Window):
             newenemy = Muskroom(physics=self.physics, filename=path+'/enemy/muskroom_sprite.png', scale=0.2, center_x=200+i*30, center_y=400)
             self.enemies.append(newenemy)
 
+        self.thecrab = Muscrab(physics=self.physics, filename=path+'/enemy/muscrab_sprite.gif', scale=0.2, center_x=70, center_y=400)
+        
+    
 
         arcade.run()
         
@@ -42,7 +45,8 @@ class MuskFormer(arcade.Window):
         #print("Update!")
 
         self.player.on_update(delta=deltatime)
-
+        self.thecrab.on_update(deltatime)
+        self.thecrab.update_animation(deltatime)
         for enemy in self.enemies:
             enemy.on_update(delta=deltatime)
 
@@ -54,6 +58,8 @@ class MuskFormer(arcade.Window):
         arcade.start_render()
         self.player.draw()
 
+        self.thecrab.draw()
+        
         for enemy in self.enemies:
             enemy.draw()
 

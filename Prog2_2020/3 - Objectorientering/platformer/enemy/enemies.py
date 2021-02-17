@@ -8,6 +8,10 @@ class Muskroom(PhysicsSprite):
 
 
 
+class Muscrab(PhysicsSprite):
+    pass
+
+
 
 
 
