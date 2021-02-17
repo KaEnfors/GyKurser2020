@@ -26,8 +26,10 @@ class MuskFormer(arcade.Window):
             self.enemies.append(newenemy)
 
         self.thecrab = Muscrab(physics=self.physics, filename=path+'/enemy/muscrab_sprite.gif', scale=0.2, center_x=70, center_y=400)
-        
-    
+        self.thecrab.textures = []
+        self.thecrab.textures.append(arcade.load_texture(file_name=path+'/enemy/muscrab_sprite.gif'))
+        self.thecrab.textures.append(arcade.load_texture(file_name=path+'/enemy/muscrab_sprite.gif', flipped_vertically=True))
+#        self.thecrab.textures.append(arcade.load_texture(file_name=path+'/enemy/muskroom_sprite.png'))
 
         arcade.run()
         

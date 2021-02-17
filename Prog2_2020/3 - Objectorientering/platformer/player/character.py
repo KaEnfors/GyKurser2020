@@ -1,6 +1,7 @@
 from core import PhysicsSprite
 
 
+
 class Character(PhysicsSprite):
     pass
 
