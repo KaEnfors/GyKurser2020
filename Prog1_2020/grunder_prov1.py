@@ -69,16 +69,13 @@ while (x%9 != 0): # Igor, Marino, Rami, Michael, Mohammed, Adnoay, Elias är ni 
     y +=  str(x) + "," #y= "12,20,28,36"
 print("12", y) # "12,20,28,36"
 
-#Igor Marino, Atakan, Elias, Simon, är ni här? Skriv potatis!!
 
-# Igor, Marino, Tjalve, Michael, Atakan, Elias, Mahad, Mohammed, Rami Skriv gurka!
 x = 0
 for a in range(0,5,2): # rangen = [0,2,4] 
     for b in range(0,8,3): # rangen = [0,3,6] 
         x += b #x = 27
 print("13", x) # 27
-#Frågor? Reza, JKulian, Mahad, Daniel, Igor, Marino, Elias, Sahil, Mohammed, 
-#Zahid är ni här? Skriv tomat!
+
 
 
 def con(z): #z = 2
@@ -90,4 +87,3 @@ while not con(i) > 20: # Fasle
 
 print("14:", i) #16
 
-#Skriv snögubbe!!!!!
