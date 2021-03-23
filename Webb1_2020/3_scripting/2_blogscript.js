@@ -1,5 +1,7 @@
 
 
+
+
 function stopAnim() {
     
     console.error("Stop!") //Printar "stop"

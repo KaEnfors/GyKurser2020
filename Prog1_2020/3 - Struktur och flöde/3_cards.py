@@ -58,7 +58,3 @@ print(deck)
 while game:
     print("playing game....")
     game = input("continue? y/n:").startswith('y')
-
-
-
-
