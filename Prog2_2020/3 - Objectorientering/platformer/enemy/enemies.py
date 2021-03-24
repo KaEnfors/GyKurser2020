@@ -6,9 +6,18 @@ class Enemy(PhysicsSprite):
 
     target : arcade.Sprite = None
     checkpoint = None
+    health = 100
+    dead = False
+
+    def take_damage(self, amount):
+        self.health -= amount
+        if self.health <= 0:
+            self.dead = True
 
     def on_update(self, delta):
         self.checkpoint = self.target.position
+        if self.dead:
+            return
         #Kod för alla enemies...
         if self.direction == 'LEFT' and self.position[0] > self.checkpoint[0] +10:
             self.ax = -1 * self.movementspeed
@@ -22,7 +31,10 @@ class Enemy(PhysicsSprite):
             self.direction = 'RIGHT'
 
         super().on_update(delta)
-
+    def draw(self):
+        if self.dead:
+            return
+        super().draw()
 
 class Muskroom(Enemy):
     pass
