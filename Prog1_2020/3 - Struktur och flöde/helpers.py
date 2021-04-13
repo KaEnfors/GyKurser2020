@@ -1,4 +1,14 @@
 
+stuff = [
+    "Hej",
+    "onsdag",
+    "fysik",
+    "kalle"
+
+
+]
+
+
 
 def multiply(numbers):
     """
@@ -38,13 +48,3 @@ def find(number):
     #43
     ten = int(number/10)*10 +10
     return (ten - number)%10
-
-
-
-pnum = input("Skriv personnummer YYMMDDXXXX:")
-pnum_multiplied = multiply(pnum)
-num = summary(pnum_multiplied)
-control = find(num)
-print("Din kontrollsiffra bör vara:", control)
-
-

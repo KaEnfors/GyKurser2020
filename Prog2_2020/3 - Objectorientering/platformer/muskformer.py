@@ -6,7 +6,7 @@ from enemy.enemies import Muskroom, Muscrab
 TODO
 - Skjuta 
     - rätt alignment
-    - Flamethrowr?
+    - Flamethrosefwerefefwr?
         - samma fuel?
 - Spawns?
     - Pickups
@@ -22,7 +22,7 @@ TODO
 """
 class MuskFormer(arcade.Window):
     """
-
+    
     """
     player : Character
     physics = {

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation example</title>
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+
+</head>
+<body class="container-fluid row">
+    <div class="col"></div>
+    <div class="col">
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card text-white bg-primary mb-3 ani-wobble" style="max-width: 20rem;">
+                <div class="card-header">Example</div>
+                <div class="card-body ani-pulse">
+                  <h4 class="card-title">Primary card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="col"></div>    
+<style>
+
+.ani-pulse{
+    animation: pulse 2000ms infinite alternate linear;
+}
+.ani-pulse-ease{
+    animation: pulse 2000ms infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #000000;
+  }
+  100% {
+    background-color: #FFFFFF;
+  }
+}
+
+.ani-wobble {
+    animation: wobble 500ms infinite linear
+}
+
+
+@keyframes wobble {
+    0% {
+        transform: translate(0px);
+    }
+    25% {
+        transform: translate(-20px);
+    }
+
+    75% {
+        transform: translate(20px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+
+
+</style>
+</body>
+</html>
